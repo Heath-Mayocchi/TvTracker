@@ -12,7 +12,7 @@ Author: Smurfenstein
 		-->
 	</head>
 	<body>
-		<form action="php/searchBox.php">
+		<form action="php/searchBox.php" method="post">
 			<input type="text" name="searchText" placeholder="Search Torrents...">
 			<input type="submit" value="Search">
 		</form>
