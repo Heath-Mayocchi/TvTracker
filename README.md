@@ -12,6 +12,8 @@ Search for and add new TV shows to the list
 
 Launch episodes from the app to keep track of watched episodes
 
+List trending TV and movies
+
 Create a single page site using AngularJS
 
 Use jQuery
