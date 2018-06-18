@@ -10,6 +10,8 @@ Maybe use multiple torrent sites for results?
 
 Search for and add new TV shows to the list
 
+Launch episodes from the app to keep track of watched episodes
+
 Create a single page site using AngularJS
 
 Use jQuery
