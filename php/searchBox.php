@@ -5,18 +5,32 @@
 	regex results and magnet links
 	display list
 */
-	// assign search term
+	// assign posted search term
 	$searchTerm = $_POST["searchText"];
+	
+	// links for torrent site searches
+	$piratebay = "https://thepiratebay.org/search/$searchTerm/0/99/0";
+	
+	// add these sites later
+	//$leetx = "https://1337x.to/search/$searchTerm/1/";
+	//$pirateiro = "https://pirateiro.com/torrents/?search=$searchTerm";
+	
 	// get search result
-	$searchResult = file_get_contents("https://thepiratebay.org/search/$searchTerm/0/99/0");
+	$piratebayResult = file_get_contents($piratebay);
+	
 	// regex pattern for torrent results
-	$torrentPattern = "/(<td>
+	$piratebayPattern = "/(<td>
 <div class=\"detName\">			<a href=\"\/torrent)(...+)(center>
 		<\/td>)/su";
+		
 	// apply regex pattern to results
-	preg_match($torrentPattern, $searchResult, $matches);
-	// add https://thepiratebay.org to the torrent and category links
+	preg_match($piratebayPattern, $piratebayResult, $piratebayMatches);
+	
+	// remove array text
+	
+	// add https://thepiratebay.org to the torrent, category and uploader links
+	
 	// format list
 	
-	print_r($matches);
+	print_r($piratebayMatches);
 ?>
